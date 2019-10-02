@@ -1,24 +1,47 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Card from './Components/Card';
+import FollowerCards from './Components/FollowerCards';
 
 class App extends React.Component {
   state = {
-    myGithub: 'Eric',
+    myGithub: {},
+    myFollowers: []
+  }
+  componentDidMount() {
+    axios
+      .get('https://api.github.com/users/chards79')
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          myGithub: res.data
+        });
+      })
+      .catch(err => console.log('Nope', err));
 
+    axios
+      .get('https://api.github.com/users/chards79/followers')
+      .then(res => {
+        console.log(res);
+        this.setState({
+          myFollowers: res.data
+        });
+      })
+      .catch(err => console.log('No followers', err));
   }
 
+  render() {
+    return (
+      <div className="App">
+        <h1>Github Profile Cards</h1>
+        <Card myGithub={this.state.myGithub} myFollowers={this.state.myFollowers} />
+        <h2>My Followers</h2>
+        {this.state.myFollowers.map(props => (
+          <FollowerCards myFollowers={this.state.myFollowers} />
+        ))}
 
-
-  return(
-    <div className = "App" >
-      <header className="App-header">
-
-        Learn React
-
-      </header>
-    </div>
-  );
+      </div>
+    )
+  }
 }
-
 export default App;

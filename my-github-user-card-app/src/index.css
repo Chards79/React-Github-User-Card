@@ -5,9 +5,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1, h2 {
+  text-shadow: 2px 2px 4px rgb(255, 255, 138);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 25%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  background-color: #FFF;
+  margin: 30px;
+  background-color: rgb(126, 179, 233);
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0 1px 6px -2px #000;
+}
+
+.card-info {
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px black;
+  box-shadow: 0 1px 6px -2px #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 164);
+}
+
+.follower-cards {
+  width: 25%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  background-color: #FFF;
+  margin: 30px;
+  background-color: rgb(126, 179, 233);
 }
