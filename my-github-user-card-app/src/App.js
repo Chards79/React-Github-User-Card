@@ -34,12 +34,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Github Profile Cards</h1>
-        <Card myGithub={this.state.myGithub} myFollowers={this.state.myFollowers} />
+        <Card myGithub={this.state.myGithub} />
         <h2>My Followers</h2>
-        {this.state.myFollowers.map(props => (
-          <FollowerCards myFollowers={this.state.myFollowers} />
-        ))}
-
+        <FollowerCards myFollowers={this.state.myFollowers} />
       </div>
     )
   }
