@@ -52,10 +52,23 @@ img {
   flex-direction: column;
   align-items: center;
   background-color: rgb(255, 255, 164);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.followers-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 30px 30px 30px;
+  border: solid 2px black;
+  box-shadow: 0 1px 6px -2px #000;
+  width: 80%;
+  background-color: gray;
 }
 
 .follower-cards {
-  width: 25%;
+  width: 15%;
   padding: 20px;
   display: flex;
   flex-direction: column;
